@@ -79,7 +79,7 @@ nltk.download('stopwords')
 
 ---
 
-### 🌐 3. Run the Web App
+### 🌐 3. Run the Web App (From Terminal)
 ```bash
 python app.py
 ```
