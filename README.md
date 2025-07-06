@@ -1,52 +1,104 @@
-# Emotion-Detection
+# 😃 Emotion Detection from Text (Machine Learning + Flask App)
 
-# 😃 Emotion Detection from Text (Sentiment Classification)
+This project performs **emotion classification** of text using traditional machine learning models. It includes both:
 
-This project performs **emotion classification** on text data using multiple machine learning models. The goal is to detect and categorize emotions expressed in textual data (e.g., happy, sad, angry, etc.). The notebook also includes **text cleaning**, **keyword extraction**, and **visualization techniques**.
+- A **Jupyter Notebook** for training, evaluating, and saving the model
+- A simple **Flask Web App** to interactively predict emotions from user input
+<br>
+<br>
 
----
-
-## 📚 Project Overview
-
-This is a full **text classification pipeline** for detecting emotions in short text samples. The project includes:
-
-- Data exploration and preprocessing
-- Text cleaning (stopwords, emojis, punctuations)
-- Feature extraction (TF-IDF / Bag of Words)
-- Keyword analysis and word clouds
-- Model training using ML algorithms
-- Performance comparison between models
+  ![Emotion UI](assests/emotion.png)
 
 ---
 
-## 💡 Features
+## 📌 Project Features
 
-- 🔍 Text cleaning (noise, punctuation, emojis, stopwords)
-- 💬 Emotion classification using:
+### 🧪 Machine Learning Notebook (`Emotion-Detection.ipynb`)
+- Text cleaning and preprocessing (stopwords, punctuation, emojis)
+- Keyword extraction per emotion
+- Emotion classification using:
   - Naive Bayes
   - Logistic Regression
   - K-Nearest Neighbors (KNN)
   - Decision Tree
-- ☁️ Keyword extraction per emotion label
-- 📊 WordClouds for each emotion category
-- ⚙️ Comparison with Spark NLP / John Snow Labs' NLU (optional)
+- WordCloud visualizations
+- Model comparison
+- Model export as `.pkl`
+
+### 🌐 Flask Web App (`app.py`)
+- Input a sentence on the web
+- Backend uses saved model and vectorizer
+- Real-time emotion prediction
 
 ---
 
-## 🧰 Technologies Used
+## 📁 Project Structure
 
-- Python 3.x
-- Pandas, NumPy
-- Scikit-learn
-- NLTK, SpaCy
-- Matplotlib, Seaborn, WordCloud
-- Jupyter Notebook
+Emotion-Detection-Project/<br>
+├── Emotion-Detection.ipynb  (Jupyter notebook for training and evaluation)<br>
+├── app.py  (Flask app for interactive prediction)<br>
+├── emotion_model.pkl  (Trained ML model (saved from notebook))<br>
+├── vectorizer.pkl  (TF-IDF or CountVectorizer)<br>
+├── templates/index.html  (Frontend UI for the Flask app)<br>
+├── requirements.txt  (Python dependencies)<br>
+└── README.md  (This file)<br>
 
 ---
 
-## 🚀 How to Run
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/YourUsername/Emotion-Detection-Text.git
-   cd Emotion-Detection-Text
+---
+
+## 🚀 How to Run the Project
+
+### 🔧 1. Install Required Packages
+
+```bash
+pip install -r requirements.txt
+```
+If you don’t have requirements.txt, manually install:
+```bash
+pip install flask scikit-learn nltk
+```
+```python
+import nltk
+nltk.download('stopwords')
+```
+
+---
+### 🧠 2. Train and Export the Model (from Notebook)
+1. Open `Emotion-Detection.ipynb` in Jupyter Notebook
+
+2. Run the notebook cells step-by-step
+
+3. At the end, it will generate:
+
+  - `emotion_model.pkl`
+
+  - `vectorizer.pkl`
+
+
+---
+
+### 🌐 3. Run the Web App
+```bash
+python app.py
+```
+Then go to:
+👉 `http://127.0.0.1:5000` in your browser
+Type in a sentence and see its predicted emotion in real-time.
+
+---
+
+## 📊 Sample Prediction
+Input: "I feel so lonely and tired today."<br>
+Output: Predicted Emotion: `sad`
+
+![Web UI](assests/web-ui.png)
+
+---
+### 🙋‍♂️ Author
+Pankaj Kumar<br>
+GitHub: [@Pankaj97825](https://github.com/Pankaj97825)
+
+
+
