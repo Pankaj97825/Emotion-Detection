@@ -96,6 +96,11 @@ Output: Predicted Emotion: `sad`
 ![Web UI](assests/web-ui.png)
 
 ---
+
+## 📄 License
+This project is open-source and available under the MIT License.
+
+---
 ### 🙋‍♂️ Author
 Pankaj Kumar<br>
 GitHub: [@PankajKumar-11](https://github.com/PankajKumar-11)
